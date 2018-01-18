@@ -5,7 +5,7 @@ $(document).ready(function(){
     var year = parseInt($("#userInput").val()); //note parseInt
     $("#initially-hidden").text(result); //displays returned boolean value
     var leapYear = function(year){
-      if((year % 100 !== 0) && (year % 4 === 0)){
+      if((year % 100 !== 0) && (year % 4 === 0) || (year % 400 === 0)){
         return true;
       }else{
         return false;
@@ -26,3 +26,5 @@ $(document).ready(function(){
 //if year is divisible by 4, return true
 
 //becomes if year is not divisible by 100 % is divisible by 4 return true
+
+//if year is divisible by 400 returns true
